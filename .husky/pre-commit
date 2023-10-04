@@ -3,3 +3,4 @@
 
 npx eslint --fix . && pnpx prettier --write .
 pnpm run test
+pnpm exec lint-staged

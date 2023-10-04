@@ -2,6 +2,9 @@
   "name": "next-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,7 +27,9 @@
     "eslint-config-next": "13.5.4",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
+    "lint-staged": "^14.0.1",
     "postcss": "^8",
+    "prettier": "3.0.3",
     "tailwindcss": "^3"
   }
 }
