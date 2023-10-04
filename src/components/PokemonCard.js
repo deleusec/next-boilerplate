@@ -21,7 +21,7 @@ export default function PokemonCard({ data }) {
 
   return (
     <Link
-      href={pokemonData ? `/pokemon/${pokemonData.id}` : ""}
+      href={""}
       className={
         "w-full max-w-2xl bg-gray-200 border p-4 rounded-md text-lg items-center flex mb-4 "
       }
@@ -33,7 +33,20 @@ export default function PokemonCard({ data }) {
           className={"w-30 h-30 mr-3"}
         />
       )}
-      <span className={"text-black capitalize"}>{data.name}</span>
+      <div className={"flex justify-between items-center w-full capitalize"}>
+        <span className={"bg-blue-950 rounded-full py-1 px-8 text-base mx-2"}>
+          {data.name}
+        </span>
+        {pokemonData && (
+          <span
+            className={
+              "text-black capitalize italic text-yellow-500 text-xl mx-4 font-bold"
+            }
+          >
+            #{pokemonData.id}
+          </span>
+        )}
+      </div>
     </Link>
   );
 }
