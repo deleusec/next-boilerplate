@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx eslint --fix . && pnpx prettier --write .
-pnpm run cypress:open
+pnpm run test
