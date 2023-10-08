@@ -26,12 +26,14 @@ export default function PokemonCard({ data }) {
         "w-full max-w-2xl bg-gray-200 border p-4 rounded-md text-lg items-center flex mb-4 "
       }
     >
-      {pokemonData && (
+      {pokemonData ? (
         <img
           src={pokemonData.sprites["front_default"]}
           alt={data.name}
-          className={"w-30 h-30 mr-3"}
+          className={"w-[100px] h-[100px] mr-3"}
         />
+      ) : (
+        <div className={"aspect-square w-[100px] h-[100px] mr-3"}></div>
       )}
       <div className={"flex justify-between items-center w-full capitalize"}>
         <span className={"bg-blue-950 rounded-full py-1 px-8 text-base mx-2"}>
